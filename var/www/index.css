@@ -1,0 +1,13 @@
+* {background: lightseagreen; font-weight: bold;}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+div {margin-bottom: 20px;}
+div:last-of-type {margin-bottom: 0px}
+p {width: 100%; text-align: center; font-size: large; margin-bottom: 0px;}
+div p:last-of-type {font-size: xx-large;}
