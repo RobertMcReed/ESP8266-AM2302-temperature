@@ -1,4 +1,4 @@
-#include <ArduinoJson.h>
+#include "json.h"
 
 String jsonReading(float t, float h, float hi) {
   DynamicJsonDocument jDoc(256);
