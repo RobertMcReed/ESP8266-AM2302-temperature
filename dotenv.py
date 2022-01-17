@@ -8,6 +8,9 @@ with open('.env', 'r') as f:
     lines = f.readlines()
 
     for line in lines:
+        if line[0] == '#':
+            continue
+        
         key, val = line.strip().split('=')
         string_val = "\\\"" + val.replace("\\", "\\\\") + "\\\""
         build_vars.append(('__{}__'.format(key), string_val))
