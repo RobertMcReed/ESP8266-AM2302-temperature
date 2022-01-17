@@ -77,6 +77,9 @@ void mqttLoop() {
 
   if (now - last_publish < MQTT_PUBLISH_DELAY) { return; }
 
+  // if any of the data is a 0, the reading is not legitimate
+  if (!isValidReading()) { return; }
+
   last_publish = now;
   const String state_s = getLatestReadingAsJson();
   const char *state = state_s.c_str();

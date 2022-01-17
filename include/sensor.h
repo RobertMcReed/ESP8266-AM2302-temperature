@@ -6,6 +6,7 @@
 #define SENSOR_DHT_h
 
 String getLatestReadingAsJson();
+bool isValidReading();
 void setupSensor();
 void sensorLoop();
 

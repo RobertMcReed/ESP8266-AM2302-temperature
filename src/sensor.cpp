@@ -13,6 +13,18 @@ float lastTemp = 0;
 float lastHumidity = 0;
 float lastHeatIndex = 0;
 
+boolean isValidReading() {
+  if (lastTemp == 0) {
+    return false;
+  } else if (lastHumidity == 0) {
+    return false;
+  } else if (lastHeatIndex == 0) {
+    return false;
+  }
+
+  return true;
+}
+
 String getLatestReadingAsJson() {
   return jsonReading(lastTemp, lastHumidity, lastHeatIndex);
 }
