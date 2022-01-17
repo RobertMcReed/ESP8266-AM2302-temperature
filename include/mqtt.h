@@ -7,9 +7,6 @@
 #define MQTT_HA_h
 
 void setupMQTT();
-void reconnect();
-void publishHomeAssistantDiscovery();
 void mqttLoop();
-bool shouldPublish();
 
 #endif
